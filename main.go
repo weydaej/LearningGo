@@ -1,7 +1,9 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -53,6 +55,13 @@ func main() {
 
 	answer, even := numSum(2, 7)
 	fmt.Println(answer, even)
+
+	res, err := sqrt(-16)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(res)
+	}
 }
 
 func numSum(a int, b int) (int, bool) {
@@ -61,4 +70,11 @@ func numSum(a int, b int) (int, bool) {
 		isEven = true
 	}
 	return a + b, isEven
+}
+
+func sqrt(x float64) (float64, error) {
+	if x < 0 {
+		return 0, errors.New("Cannot take sqrt of negative numbers")
+	}
+	return math.Sqrt(x), nil
 }
