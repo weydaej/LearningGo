@@ -31,7 +31,19 @@ func main() {
 	delete(vertices, "triangle")
 	fmt.Println(vertices)
 
+	// for loop
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
+	}
+	// there are no while loops in Go o.O
+	i := 0
+	for i < 5 {
+		fmt.Println("i:", i)
+		i++
+	}
+
+	arr := []string{"a", "b", "c"}
+	for index, value := range arr {
+		fmt.Println("index:", index, "value:", value)
 	}
 }
