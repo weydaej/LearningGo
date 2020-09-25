@@ -26,6 +26,10 @@ func main() {
 	vertices["square"] = 4
 	vertices["dodecagon"] = 12
 
+	for key, value := range vertices {
+		fmt.Println("key:", key, "value:", value)
+	}
+
 	fmt.Println(vertices)
 	fmt.Println(vertices["triangle"])
 	delete(vertices, "triangle")
@@ -46,4 +50,11 @@ func main() {
 	for index, value := range arr {
 		fmt.Println("index:", index, "value:", value)
 	}
+
+	answer := numSum(2, 4)
+	fmt.Println(answer)
+}
+
+func numSum(a int, b int) int {
+	return a + b
 }
