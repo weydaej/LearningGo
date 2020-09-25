@@ -51,10 +51,14 @@ func main() {
 		fmt.Println("index:", index, "value:", value)
 	}
 
-	answer := numSum(2, 4)
-	fmt.Println(answer)
+	answer, even := numSum(2, 7)
+	fmt.Println(answer, even)
 }
 
-func numSum(a int, b int) int {
-	return a + b
+func numSum(a int, b int) (int, bool) {
+	isEven := false
+	if (a+b)%2 == 0 {
+		isEven = true
+	}
+	return a + b, isEven
 }
