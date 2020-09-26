@@ -62,6 +62,9 @@ func main() {
 	} else {
 		fmt.Println(res)
 	}
+
+	p := person{name: "Emily", age: 23}
+	fmt.Println(p)
 }
 
 func numSum(a int, b int) (int, bool) {
@@ -77,4 +80,9 @@ func sqrt(x float64) (float64, error) {
 		return 0, errors.New("Cannot take sqrt of negative numbers")
 	}
 	return math.Sqrt(x), nil
+}
+
+type person struct {
+	name string
+	age  int
 }
