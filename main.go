@@ -65,6 +65,19 @@ func main() {
 
 	p := person{name: "Emily", age: 23}
 	fmt.Println(p)
+	fmt.Println(p.name)
+	fmt.Println(p.age)
+
+	// pointers
+	ex := 2
+	fmt.Println(&ex)
+	inc(&ex)
+	fmt.Println(&ex)
+
+}
+
+func inc(x *int) {
+	*x++
 }
 
 func numSum(a int, b int) (int, bool) {
