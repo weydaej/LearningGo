@@ -73,6 +73,10 @@ func main() {
 	fmt.Println(&ex)
 	inc(&ex)
 	fmt.Println(&ex)
+	go fmt.Println("Hello")
+	for index, value := range arr {
+		fmt.Println("index:", index, "value:", value)
+	}
 
 }
 
