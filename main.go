@@ -63,7 +63,7 @@ func main() {
 		fmt.Println(res)
 	}
 
-	p := person{name: "Emily", age: 23}
+	p := person{name: "Emily", age: 23, username: "why_duh", password: "password"}
 	fmt.Println(p)
 	fmt.Println(p.name)
 	fmt.Println(p.age)
@@ -100,6 +100,8 @@ func sqrt(x float64) (float64, error) {
 }
 
 type person struct {
-	name string
-	age  int
+	name     string
+	age      int
+	username string
+	password string
 }
